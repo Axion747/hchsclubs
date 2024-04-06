@@ -133,7 +133,7 @@ export default function HomePage() {
             </Highlight>
             </h1>
             <p className="mt-6 text-base tracking-tight leading-8 text-gray-600">
-              Ignore the spreadsheets and slideshows hidden in the depths of an obsecure website no one ever visits. It only takes a simple search page but they can't seem to do it. We did it for you. And it's open-sourced, which means you can steal it and call it yours.
+              Ignore the spreadsheets and slideshows hidden in the depths of an obsecure website no one ever visits. It only takes a simple search page but they cannot seem to do it. We did it for you. And it is open-sourced, which means you can steal it and call it yours.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
