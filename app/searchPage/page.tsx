@@ -1,4 +1,4 @@
-"use client"
+
 import { ClubInfo, columns } from "../../components/columns"
 import { DataTable } from "../../components/data-table"
 import { createClient } from '@/utils/supabase/server';
