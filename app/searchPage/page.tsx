@@ -3,14 +3,38 @@ import { ClubInfo, columns } from "../../components/columns"
 import { DataTable } from "../../components/data-table"
 import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link'
-async function getData(): Promise<ClubInfo[]> {
-    const clubs: ClubInfo[] = await fetch('https://hchsclubs-fb54a0jss-axion747s-projects.vercel.app/notes').then((res) => res.json());
-    return (clubs)
-    
+import {NextResponse} from 'next/server'
+
+async function GET() {
+  const supabase = createClient();
+
+  supabase.auth.getUser();
+  let { data: Clubs, error } = await supabase
+      .from('Clubs')
+      .select('*')
+  process.on('uncaughtException', function (err) {
+      console.log(err);
+  }); 
+  return NextResponse.json(Clubs);
+  
 }
+
+// async function getData(): Promise<ClubInfo[]> {
+//   const supabase = createClient();
+
+//   supabase.auth.getUser();
+//   let { data: Clubs, error } = await (supabase
+//       .from('Clubs')
+//       .select('*')).then((res) => (res != null) ? res : console.log("error"));
+
+//     // const clubs: ClubInfo[] = await fetch('http://localhost:3000/notes').then((res) => res.json());
+//     const clubs: ClubInfo[] = Clubs.json();
+//     return (clubs)
+    
+// }
  
 export default async function searchPage() {
-    const data = await getData();
+    const data = await GET().then((res) => res.json());
     return (
         <div>
         <div
