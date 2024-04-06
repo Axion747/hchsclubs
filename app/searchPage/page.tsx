@@ -1,6 +1,6 @@
 "use client"
-import { ClubInfo, columns } from "./columns"
-import { DataTable } from "./data-table"
+import { ClubInfo, columns } from "../../components/columns"
+import { DataTable } from "../../components/data-table"
 import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link'
 async function getData(): Promise<ClubInfo[]> {
