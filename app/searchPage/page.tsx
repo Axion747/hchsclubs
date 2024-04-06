@@ -4,7 +4,7 @@ import { DataTable } from "../../components/data-table"
 import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link'
 async function getData(): Promise<ClubInfo[]> {
-    const clubs: ClubInfo[] = await fetch('http://localhost:3000/notes').then((res) => res.json());
+    const clubs: ClubInfo[] = await fetch('https://hchsclubs-fb54a0jss-axion747s-projects.vercel.app/notes').then((res) => res.json());
     return (clubs)
     
 }
