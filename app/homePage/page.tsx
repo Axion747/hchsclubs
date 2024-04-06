@@ -16,7 +16,7 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-purple-100 h-screen">
+    <div className=" h-full object-fill">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -106,14 +106,14 @@ export default function HomePage() {
           aria-hidden="true"
         >
           <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            className="relative h-screen left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-36 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-6xl py-36 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 v0.1 Release.{' '}
@@ -124,16 +124,16 @@ export default function HomePage() {
             </div>
           </div>
           <div className="text-center">
-            <h2 className="text-4xl font-semibold tracking-tight  text-gray-900 sm:text-4xl">
-              The GO did not do it. So we did.
+            <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+              The GO made your life harder. We undid that.
             </h2>
             <h1 className = "text-6xl leading-loose">
-              <Highlight className =" dark:text-black text-6xl font-bold tracking-tight sm:text-6xl mt-6">
+              <Highlight className =" dark:text-black text-6xl font-bold tracking-tight sm:text-6xl mt-6 slide-in-from-bottom-60">
                 HCHSClubs
             </Highlight>
             </h1>
-            <p className="mt-6 text-lg tracking-tight leading-8 text-gray-600">
-              Your way to traverse the Hunter community. This is a test site to help better find clubs throughout Hunter. This is also fully open sourced!
+            <p className="mt-6 text-base tracking-tight leading-8 text-gray-600">
+              Ignore the spreadsheets and slideshows hidden in the depths of an obsecure website no one ever visits. It only takes a simple search page but they can't seem to do it. We did it for you. And it's open-sourced, which means you can steal it and call it yours.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a

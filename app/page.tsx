@@ -7,7 +7,7 @@ import HomePage from "./homePage/page";
 
 export default function Home() {
   return (
-    <main>
+    <main className = "object-fill">
       <HomePage />
     </main>
   );
