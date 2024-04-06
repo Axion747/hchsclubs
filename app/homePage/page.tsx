@@ -125,7 +125,7 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <h2 className="text-4xl font-semibold tracking-tight  text-gray-900 sm:text-4xl">
-              The GO didn't do it. So we did.
+              The GO did not do it. So we did.
             </h2>
             <h1 className = "text-6xl leading-loose">
               <Highlight className =" dark:text-black text-6xl font-bold tracking-tight sm:text-6xl mt-6">
