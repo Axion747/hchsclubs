@@ -1,7 +1,9 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-import { MoreHorizontal, ArrowUpDown} from "lucide-react"
+import { MoreHorizontal, ArrowUpDown, Club} from "lucide-react"
+
+import { ClubCard } from "@/components/clubCard"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -12,6 +14,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export type ClubInfo = {
     Name: string
@@ -24,6 +37,10 @@ export type ClubInfo = {
     AdvisorName: string
     AdvisorEmail: string
     IDNum: number
+}
+
+export type Day = {
+  
 }
 
 export const columns: ColumnDef<ClubInfo>[] = [
@@ -53,36 +70,13 @@ export const columns: ColumnDef<ClubInfo>[] = [
       accessorKey: "Period",
       header: "Period",
     },
-    // {
-    //   accessorKey: "Paired",
-    //   header: "Paired",
-    // },
-    // {
-    //   accessorKey: "Leadership",
-    //   header: "Leadership",
-    // },
-    // {
-    //   accessorKey: "LeadershipEmails",
-    //   header: "Leadership Emails",
-    // },
-    // {
-    //   accessorKey: "AdvisorName",
-    //   header: "Advisor Name",
-    // },
-    // {
-    //   accessorKey: "AdvisorEmail",
-    //   header: "Advisor Email",
-    // },
-    // {
-    //   accessorKey: "IDNum",
-    //   header: "ID Number",
-    // },
     {
         id: "actions",
         cell: ({ row }) => {
-          const payment = row.original
+          const club = row.original
      
           return (
+          <Dialog>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-8 w-8 p-0">
@@ -92,16 +86,66 @@ export const columns: ColumnDef<ClubInfo>[] = [
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                <DropdownMenuItem
-                  onClick={() => navigator.clipboard.writeText(payment.Room)}
+                {/* <DropdownMenuItem
+                  onClick={() => navigator.clipboard.writeText(club.AdvisorEmail)}
                 >
-                  Copy payment ID
-                </DropdownMenuItem>
+                  Copy Advisor Email
+                </DropdownMenuItem> */}
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>More Info</DropdownMenuItem>
-                <DropdownMenuItem>Contact</DropdownMenuItem>
+                <DialogTrigger asChild>
+                  <DropdownMenuItem>
+                    <span>More Info</span>
+                  </DropdownMenuItem>
+                </DialogTrigger>
               </DropdownMenuContent>
             </DropdownMenu>
+
+
+
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>{club.Name}</DialogTitle>
+                  <br />
+                  <DialogDescription>
+                    Room: {club.Room}
+                  </DialogDescription>
+                  <DialogDescription>
+                    Day(s) Running: {club.Day}
+                  </DialogDescription>
+                  <DialogDescription>
+                    Period: {club.Period}
+                  </DialogDescription>
+                  <DialogDescription>
+                    {club.Paired == null ? (
+                      "Not Paired"
+                    ) : (
+                      club.Paired
+                    )}
+                  </DialogDescription>
+                  <DialogDescription>
+                    Leadership (Grade): {club.Leadership}
+                  </DialogDescription>
+                  <DialogDescription>
+                    Leadership Email: {club.LeadershipEmails}
+                  </DialogDescription>
+                  <DialogDescription>
+                    Advisor Name: {club.AdvisorName}
+                  </DialogDescription>
+                  <DialogDescription>
+                    Advisor Email: {club.AdvisorEmail}
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex items-center space-x-2">
+                </div>
+                {/* <DialogFooter className="sm:justify-start">
+                  <DialogClose asChild>
+                    <Button type="button" variant="secondary">
+                      Close
+                    </Button>
+                  </DialogClose>
+                </DialogFooter> */}
+              </DialogContent>
+            </Dialog>
           )
         },
       },
