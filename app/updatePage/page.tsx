@@ -1,5 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Example() {
   return (
@@ -59,7 +60,7 @@ export default function Example() {
           </div>
         </div>
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
+          <Image
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
             src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
             alt=""
@@ -99,7 +100,7 @@ export default function Example() {
                 Still our first release, so everything is basic. Expect more features and integrations in the future. We current plan on 
                 Google integrations, including live connection to the official GO club list (currently imported by hand). A new suite of
                 features will come with integration with Google OAuth and account management, hopefully allowing you to add yourself to any 
-                club's email list through the site. This is currently not possible without administration cooperation. Better list filtering 
+                club email list through the site. This is currently not possible without administration cooperation. Better list filtering 
                 and implementing descriptions to aid with club searching algorithm. And finally, better 
                 site design! Why not make it take even longer to render?
               </p>
