@@ -142,7 +142,7 @@ export default function HomePage() {
               >
                 Search
               </a>
-              <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
+              <Link href="https://github.com/Axion747/hchsclubs" className="text-sm font-semibold leading-6 text-gray-900">
                 Source <span aria-hidden="true">→</span>
               </Link>
             </div>

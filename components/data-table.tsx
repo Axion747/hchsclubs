@@ -114,6 +114,8 @@ export function DataTable<TData, TValue>({
 
             
         <Table className = "bg-white">
+
+          
             <TableHeader className="bg-indigo-600 text-white shadow-sm hover:bg-indigo-500">
             {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>

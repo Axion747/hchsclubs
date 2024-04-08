@@ -98,8 +98,8 @@ export const columns: ColumnDef<ClubInfo>[] = [
                   Copy payment ID
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>View customer</DropdownMenuItem>
-                <DropdownMenuItem>View payment details</DropdownMenuItem>
+                <DropdownMenuItem>More Info</DropdownMenuItem>
+                <DropdownMenuItem>Contact</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           )
